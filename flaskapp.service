@@ -1,0 +1,13 @@
+[Unit]
+Description=My Flask Application
+After=network.target
+
+[Service]
+User=ubuntu  
+Group=ubuntu  
+WorkingDirectory=/home/ubuntu/backend/portfoliobackend/
+ExecStart=/usr/bin/python3 /home/ubuntu/backend/portfoliobackend/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
